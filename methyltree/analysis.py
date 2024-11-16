@@ -96,7 +96,7 @@ def comprehensive_lineage_analysis(
     similarity_correction=True,
     similarity_correction_method="fast",
     similarity_correction_step_size=0.05,
-    similarity_normalize=False,
+    similarity_normalize=True,
     remove_celltype_signal=False,
     remove_celltype_signal_method="fast",
     remove_celltype_signal_outlier_thresh=1,
