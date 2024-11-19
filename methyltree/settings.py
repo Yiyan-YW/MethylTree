@@ -3,6 +3,8 @@ import os
 #from envpath.settings import *
 
 help_function_dir, this_filename = os.path.split(__file__)
+default_feature_dir='.' #The dictory for .bed files, which can be modified as needed
+source_script_dir = '.' #The dictory for Rscripts, which can be modified as needed
 
 color_list = [
     "#1f78b4",
@@ -51,7 +53,5 @@ color_list_2 = [
     "#636363",
     "#ffd92f",
     "#b3b3b3",
-    "#db5f57",
-]
     "#db5f57",
 ]

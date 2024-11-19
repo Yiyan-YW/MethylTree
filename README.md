@@ -18,6 +18,7 @@ pip install poetry
 cd MethylTree # Go to the MethylTree directory
 poetry install
 cd ..
+pip install methscan
 pip install jupyterlab
 python -m ipykernel install --user --name=MethylTree
 ```
