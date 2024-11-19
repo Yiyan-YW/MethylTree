@@ -15,6 +15,7 @@ Please setup a conda environment called `MethylTree`. This is our core environme
 conda create -n MethylTree python=3.9 --yes
 conda activate MethylTree
 pip install poetry
+git clone https://github.com/ShouWenWang-Lab/MethylTree # get the MethylTree package
 cd MethylTree # Go to the MethylTree directory
 poetry install
 cd ..
