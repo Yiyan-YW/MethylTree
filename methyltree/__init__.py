@@ -1,4 +1,4 @@
-from . import QC, adata, batch, clone
+from . import QC, adata, analysis, batch, clone
 from . import help_functions as hf
 from . import (
     lineage,
