@@ -14,11 +14,7 @@ Please setup a conda environment called `MethylTree`. This is our core environme
 ```bash
 conda create -n MethylTree python=3.9 --yes
 conda activate MethylTree
-pip install poetry
-git clone https://github.com/ShouWenWang-Lab/MethylTree # get the MethylTree package
-cd MethylTree # Go to the MethylTree directory
-poetry install
-cd ..
+pip install methyltree
 pip install methscan
 pip install jupyterlab
 python -m ipykernel install --user --name=MethylTree
