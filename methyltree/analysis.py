@@ -195,7 +195,10 @@ def comprehensive_lineage_analysis(
     for _ in used_key_list:
         if _ is not None:
             if _ not in adata.obs.keys():
-                df_sample = metadata.load_sample_info(data_path)
+                df_sample = metadata.load_sample_info(
+                    data_path, 
+                    file_name=f"{data_des}_sample_info.tsv.gz"
+                )
                 if _ not in df_sample.columns:
                     available_keys = set(adata.obs.keys()).union(set(df_sample.columns))
                     raise ValueError(
@@ -209,7 +212,9 @@ def comprehensive_lineage_analysis(
 
     if update_sample_info:
         print("update sample")
-        df_sample = metadata.load_sample_info(data_path)
+        df_sample = metadata.load_sample_info(
+            data_path, file_name=f"{data_des}_sample_info.tsv.gz"
+        )
         metadata.update_sample_info_on_adata(adata, df_sample)
 
     if f"X_similarity_{similarity_method}_raw" not in adata.obsm.keys():
