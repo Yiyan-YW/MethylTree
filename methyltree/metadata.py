@@ -207,7 +207,7 @@ def get_methscan_sample_index_map(compact_file_dir):
 ###########
 
 
-def load_sample_info(root_dir, force_run=False):
+def load_sample_info(root_dir, file_name="sample_sheet.tsv.gz",force_run=False):
     """
     Load or initialize (force_run=True) sample_info.
     Note that this is the only place where we use the config.yaml file to
@@ -219,8 +219,11 @@ def load_sample_info(root_dir, force_run=False):
         root_dir:
             Directory at the downstream_R/all_data/. By default, root_dir will point
             to this place throughput this file
+        file_name:
+            The name of the file with sample information. By default, file_name is
+            sample_sheet.tsv.gz
     """
-    file_path = f"{root_dir}/sample_sheet.tsv.gz"
+    file_path = f"{root_dir}/{file_name}"
     if os.path.exists(file_path) and (not force_run):
         df_sample = pd.read_csv(file_path, sep="\t", compression="gzip")
     else:
